@@ -8,9 +8,9 @@ We introduce a new framework for dimension reduction in the context of high-dime
 ## Key Functions
 - `RPEDR` (Algorithm 1): The main algorithm, which outputs $p$ dimension reduction directions, ordered by their importance.
 - `RPEDR_dim_est` (Algorithm 2): Utilizes the output of Algorithm 1 to estimate the dimension of the CMS.
-- `RPEDR_double` (Algorithm 3): A variant of Algorithm 1, designed to improve estimation performance when the true dimension of the CMS is known.
+- `RPEDR_double` (Algorithm 3): Double application of ALgorithm 1 in order to further improve estimation performance when the true dimension of the CMS is known.
 
 ## Usage Example
-To reproduce our simulation results, refer to the script file `simulation_example.R`.
+Script file `simulation_example.R` shows an example on how to use these functions for simulation data.
 
-Scripts contained in the `Real_Data` folder can be used to replicate the results in the real-world application section of our work.
+Scripts contained in the `Real_Data` folder can be used to reproduce the results in the real-world application section of our work.
