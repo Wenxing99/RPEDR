@@ -122,7 +122,7 @@ L <- 200
 M <- 10*p
 d <- ceiling(sqrt(p))
 m.RPEDR <- RPEDR(X=train.x, Y=train.y, 
-                 d=d, L=L, M=M, version = "mars", dist="mixed", n.cores=20)
+                 d=d, L=L, M=M, version = "mars", dist="mixed", n.cores=5)
 RP.dir <- m.RPEDR$U[,1:d0]
 
 Z.RP <- train.x %*% RP.dir
@@ -146,7 +146,7 @@ cat("The RMSE of RPE is", rmse.rpe, '\n')
 
 ### RPEDR double ###
 m.RPEDR.double.dir <- RPEDR_double(X=train.x, Y=train.y, 
-                                   d=d, L=L, M=M, d0=d0, version = "mars", dist="mixed", n.cores=20)
+                                   d=d, L=L, M=M, d0=d0, version = "mars", dist="mixed", n.cores=5)
 Z.RP <- train.x %*% m.RPEDR.double.dir
 proj.data <- cbind.data.frame(train.y, Z.RP)
 names(proj.data)[1] <- "Y"
